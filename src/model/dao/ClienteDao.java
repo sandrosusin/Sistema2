@@ -36,7 +36,7 @@ public class ClienteDao {
     }
     public List<Cliente> Pesquisar(Cliente cliente){
             EntityManager em = Conexao.getEntityManager();
-            StringBuilder sql = new StringBuilder("from Cliente"+"where 1 = 1");
+            StringBuilder sql = new StringBuilder("from Cliente c "+"where 1 = 1");
             if(cliente.getCodigo() !=null){
                 sql.append("and c.codigo = :codigo ");
             }
