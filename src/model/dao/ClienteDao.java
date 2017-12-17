@@ -48,9 +48,9 @@ public class ClienteDao {
                 query.setParameter("codigo", cliente.getCodigo());
             }
             if(cliente.getNome()!= null && !cliente.getNome().equals("")){
-                query.setParameter("nome", "%"+cliente.getNome()+"%");
-            }
-            return query.getResultList();
+                query.setParameter("nome", "%"+cliente.getNome()+"%");                    
     }
+     return query.getResultList();
+}
     
 }
